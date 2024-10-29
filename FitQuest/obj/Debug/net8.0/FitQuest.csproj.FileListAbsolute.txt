@@ -118,7 +118,10 @@ C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\FitQuest.
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Humanizer.dll
+C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Mailjet.Client.dll
+C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\MailKit.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -152,9 +155,13 @@ C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Microsoft
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\MimeKit.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\SendGrid.dll
+C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\StarkbankEcdsa.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -256,10 +263,3 @@ C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\obj\Debug\net8.0\refint\Fi
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\obj\Debug\net8.0\FitQuest.pdb
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\obj\Debug\net8.0\FitQuest.genruntimeconfig.cache
 C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\obj\Debug\net8.0\ref\FitQuest.dll
-C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
-C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Mailjet.Client.dll
-C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\MailKit.dll
-C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\MimeKit.dll
-C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\SendGrid.dll
-C:\Users\petru\Desktop\VU\Komparkas\FitQuest\FitQuest\bin\Debug\net8.0\StarkbankEcdsa.dll
