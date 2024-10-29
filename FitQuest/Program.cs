@@ -22,6 +22,19 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
+// Configure authentication
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+    options.ReturnUrlParameter = "returnUrl";
+    options.Events.OnRedirectToLogin = context =>
+    {
+        context.Response.Redirect("/Home");
+        return Task.CompletedTask;
+    };
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline

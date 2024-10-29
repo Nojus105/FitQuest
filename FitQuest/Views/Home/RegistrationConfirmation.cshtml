@@ -20,7 +20,9 @@
                     </div>
                     <div class="card-body">
                         <p>Thank you for registering. Please check your email to confirm your account.</p>
-                        <p>If you do not receive the email within a few minutes, please check your spam folder or <a href="/Account/ResendConfirmation">click here</a> to resend the confirmation email.</p>
+                        <p>If you do not receive the email within a few minutes, please check your spam folder or <a href="@Url.Action("ResendConfirmation", "Account")">click here</a> to resend the confirmation email.</p>
+                        <!-- Add a button to redirect to the login page -->
+                        <a href="@Url.Action("Login", "Account")" class="btn btn-primary mt-3">Go to Login</a>
                     </div>
                 </div>
             </div>

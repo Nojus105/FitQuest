@@ -56,8 +56,11 @@ namespace FitQuest.Controllers
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
+            // Store email in session
+            HttpContext.Session.SetString("UserEmail", email);
+
             // Send confirmation email
-            var token = "dummy-token"; // Generate a real token in a real application
+            var token = "dummy-token"; // Generate a token in a real application
             var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account", new { userId = user.Id, token }, Request.Scheme);
             await _emailSender.SendEmailAsync(email, "Confirm your email", $"Please confirm your email by clicking <a href=\"{confirmationLink}\">here</a>.");
 
@@ -92,14 +95,28 @@ namespace FitQuest.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(string usernameOrEmail, string password)
+        public async Task<IActionResult> Login(string usernameOrEmail, string password, string returnUrl = null)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == usernameOrEmail || u.Email == usernameOrEmail);
             if (user != null && BCrypt.Net.BCrypt.Verify(password, user.Password))
             {
+                if (!user.EmailConfirmed)
+                {
+                    ViewBag.Error = "Please confirm your email before logging in.";
+                    return View("~/Views/Home/Login.cshtml");
+                }
+
                 // Sign in the user
                 HttpContext.Session.SetString("UserId", user.Id.ToString());
-                return RedirectToAction("Welcome", "Home");
+
+                if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                {
+                    return Redirect(returnUrl);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
 
             ViewBag.Error = "Invalid login credentials";
@@ -112,6 +129,30 @@ namespace FitQuest.Controllers
             // Sign out the user
             HttpContext.Session.Remove("UserId");
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ResendConfirmation()
+        {
+            var email = HttpContext.Session.GetString("UserEmail");
+            if (string.IsNullOrEmpty(email))
+            {
+                return RedirectToAction("Login");
+            }
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Send confirmation email
+            var token = "dummy-token"; // Generate a token in a real application
+            var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account", new { userId = user.Id, token }, Request.Scheme);
+            await _emailSender.SendEmailAsync(user.Email, "Confirm your email", $"Please confirm your email by clicking <a href=\"{confirmationLink}\">here</a>.");
+
+            ViewBag.Message = "Confirmation email resent. Please check your email.";
+            return View("~/Views/Home/RegistrationConfirmation.cshtml");
         }
     }
 }
