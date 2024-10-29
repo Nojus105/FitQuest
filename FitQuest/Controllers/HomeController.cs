@@ -9,23 +9,8 @@ namespace FitQuest.Controllers
             return View();
         }
 
-        public IActionResult Register()
+        public IActionResult Welcome()
         {
-            return View();
-        }
-
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        public IActionResult Main()
-        {
-             var username = HttpContext.Session.GetString("Username");
-
-            // Pass the username to the view using ViewBag or a ViewModel
-            ViewBag.Username = username; 
-
             return View();
         }
     }

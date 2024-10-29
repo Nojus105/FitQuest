@@ -1,3 +1,7 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +10,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>FitQuest</h1>
-    
-        <a href="/Home/Register" class="btn">Register</a>
-        <a href="/Home/Login" class="btn">Login</a>
+        @if (Context.Session.GetString("UserId") != null)
+        {
+            <h1>Welcome to FitQuest</h1>
+            <p>Your fitness journey starts here.</p>
+        }
+        else
+        {
+            <h1>FitQuest</h1>
+            <a href="/Account/Register" class="btn">Register</a>
+            <a href="/Account/Login" class="btn">Login</a>
+        }
     </div>
 </body>
 </html>

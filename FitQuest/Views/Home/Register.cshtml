@@ -1,3 +1,7 @@
+@{
+    ViewData["Title"] = "Register";
+}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,22 +20,22 @@
             </div>
         }
 
-        <form method="post" action="/Auth/Register">
+        <form method="post" asp-action="Register">
             <div class="form-group">
-                <label>Username:</label>
-                <input type="text" name="username" required />
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="form-control" required />
             </div>
             <div class="form-group">
-                <label>Email:</label>
-                <input type="email" name="email" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required />
             </div>
             <div class="form-group">
-                <label>Password:</label>
-                <input type="password" name="password" required />
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required />
             </div>
             <div class="form-group">
-                <label>Confirm Password:</label>
-                <input type="password" name="confirmPassword" required />
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required />
             </div>
             <button type="submit" class="btn">Register</button>
         </form>
